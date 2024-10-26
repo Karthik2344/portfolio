@@ -1,0 +1,45 @@
+.scrollup {
+    position: fixed; /* Keeps the button in a fixed position */
+    right: 2.5rem; /* Positions it from the right */
+    bottom: -20%; /* Initially hides it off-screen */
+    background-color: var(--title-color); /* Background color from CSS variables */
+    opacity: 0.8; /* Slightly transparent */
+    padding: 0.3rem 0.5rem; /* Padding around the button */
+    border-radius: 0.4rem; /* Rounded corners */
+    z-index: var(--z-tooltip); /* Z-index for layering */
+    transition: 0.4s; /* Smooth transition for hover effects */
+}
+
+.scrollup_icon {
+    font-size: 1.5rem; /* Size of the icon */
+    color: var(--container-color); /* Color of the icon from CSS variables */
+}
+
+.scrollup:hover {
+    background-color: var(--title-color-dark); /* Changes background on hover */
+}
+
+.show-scroll {
+    bottom: 3rem; /* Position when visible */
+}
+
+/* Breakpoints */
+@media screen and (max-width: 992px) {
+    .scrollup {
+        right: 1.5rem; /* Closer on smaller screens */
+        padding: 0.25rem 0.4rem; /* Slightly smaller padding */
+    }
+    .scrollup_icon {
+        font-size: 1.25rem; /* Smaller icon */
+    }
+}
+@media screen and (max-width: 768px) {
+    .show-scroll {
+        bottom: 4rem; /* Further adjustment for very small screens */
+    }
+}
+@media screen and (max-width: 350px) {
+    .scrollup {
+        right: 1rem; /* Even closer on the smallest screens */
+    }
+}
